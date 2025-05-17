@@ -48,6 +48,7 @@
 
     keymap {
         compatible = "zmk,keymap";
+        layout = <&default_transform>;
 
         layer0 {
             bindings = <
