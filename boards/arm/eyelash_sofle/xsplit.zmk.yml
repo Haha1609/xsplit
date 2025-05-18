@@ -1,0 +1,15 @@
+file_format: "1"
+id: xsplit
+name: xsplit
+url: https://github.com/Haha1609/xsplit
+type: board
+arch: arm
+features:
+  - keys
+  - display
+outputs:
+  - usb
+  - ble
+siblings:
+  - xsplit_left
+  - xsplit_right
