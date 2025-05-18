@@ -69,7 +69,6 @@
             >;
 
             display-name = "layer1";
-            sensor-bindings = <&scroll_encoder>;
         };
 
         layer_2 {
@@ -81,8 +80,6 @@
 &trans     &sys_reset    &trans          &bootloader   &trans        &trans        &mmv MOVE_RIGHT  &trans  &trans  &trans  &sys_reset  &soft_off  &bootloader  &trans
 &trans     &trans        &trans          &trans        &trans        &trans        &mkp LCLK        &trans  &trans  &trans  &trans      &trans     &trans       &trans
             >;
-
-            sensor-bindings = <&scroll_encoder>;
         };
 
         layer_4 {
@@ -95,8 +92,6 @@
 &kp LSHFT  &kp Z     &kp X     &kp C      &kp V   &kp B      &kp DOWN        &kp DOWN        &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &kp ENTER
 &kp LCTRL  &kp LGUI  &kp LALT  &kp SPACE  &mo 1   &kp SPACE  &kp ENTER       &kp ENTER       &kp SPACE  &kp ENTER  &mo 2      &kp RIGHT_SHIFT  &kp DELETE  &kp RCTRL
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
     };
 };
