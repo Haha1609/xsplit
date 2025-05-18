@@ -28,7 +28,11 @@
     trigger-period-ms = <16>;
 };
 
-
+/ {
+    chosen {
+        zmk,split = &splitkb;
+    };
+};
 / {
 
     scroll_encoder: scroll_encoder {
