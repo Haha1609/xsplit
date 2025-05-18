@@ -4,7 +4,7 @@
 * SPDX-License-Identifier: MIT
 *
 */
-#include "eyelash_sofle.dtsi"
+#include "xsplit.dtsi"
 
 / {
     chosen {
@@ -39,7 +39,7 @@
 
 default_transform: keymap_transform_0 {
     compatible = "zmk,matrix-transform";
-    columns = <7>;  // 7 cột cục bộ (0-6)
+    columns = <7>;
     rows = <6>;
     map = <
         // RIGHT HALF: 
