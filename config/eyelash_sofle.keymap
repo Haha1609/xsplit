@@ -30,9 +30,8 @@
 
 / {
     chosen {
-        zmk,split = &splitkb;
-    
-};
+        zmk,split = &splitkb;    
+            };
 / {
 
     scroll_encoder: scroll_encoder {
