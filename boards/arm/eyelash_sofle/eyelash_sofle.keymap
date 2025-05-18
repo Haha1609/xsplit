@@ -38,7 +38,11 @@
             delay-ms = <0>;                   //   10
         };
     };
-
+/ {
+    chosen {
+        zmk,split = &splitkb;
+    };
+};
     scroll_encoder: scroll_encoder {
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
