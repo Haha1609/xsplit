@@ -9,8 +9,8 @@ manifest:
     - name: gpeye
       url-base: https://github.com/GPeye
   projects:
-    - name: eyelash_sofle
-      url: https://github.com/a741725193/zmk-sofle
+    - name: xsplit
+      url: https://github.com/Haha1609/xsplit
       revision: refactor
     - name: mario-peripheral-animation
       remote: gpeye
