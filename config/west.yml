@@ -11,7 +11,7 @@ manifest:
   projects:
     - name: xsplit
       url: https://github.com/Haha1609/xsplit
-      revision: refactor
+      revision: main
     - name: mario-peripheral-animation
       remote: gpeye
       revision: main 
