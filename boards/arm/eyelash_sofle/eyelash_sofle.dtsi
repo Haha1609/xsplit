@@ -10,11 +10,11 @@
 #include <dt-bindings/led/led.h>
 #include <dt-bindings/zmk/matrix_transform.h>
 
-#include "eyelash_sofle-layouts.dtsi"
+#include "xsplit-layouts.dtsi"
 
 / {
-    model = "eyelash_sofle";
-    compatible = "eyelashperipherals,eyelash_sofle";
+    model = "xsplit";
+    compatible = "eyelashperipherals,xsplit";
 
     chosen {
         zephyr,code-partition = &code_partition;
