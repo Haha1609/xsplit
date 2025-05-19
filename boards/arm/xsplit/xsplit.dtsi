@@ -14,7 +14,7 @@
 
 / {
     model = "xsplit";
-    compatible = "eyelashperipherals,xsplit";
+    compatible = "xsplitperipherals,xsplit";
 
     chosen {
         zephyr,code-partition = &code_partition;
@@ -23,7 +23,7 @@
         zmk,kscan = &kscan0;
         zmk,battery = &vbatt;
         zmk,underglow = &led_strip;
-        zmk,physical-layout = &eyelash_sofle_layout;
+        zmk,physical-layout = &xsplit_layout;
         zmk,backlight = &backlight;
     };
 
