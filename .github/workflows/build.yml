@@ -12,6 +12,21 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         
+      - name: Set up Python & Install west
+        run: |
+          sudo apt update
+          sudo apt install -y python3-pip cmake ninja-build gperf \
+              ccache dfu-util device-tree-compiler wget \
+              python3-dev libffi-dev git
+          pip3 install --user west
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+
+      - name: Initialize west and update
+        run: |
+          west init -l .
+          west update
+          west zephyr-export       
+          
       - name: Set up environment variables
         run: |
           echo "BOARD_ROOT=${{ github.workspace }}/boards/arm/xsplit" >> $GITHUB_ENV
