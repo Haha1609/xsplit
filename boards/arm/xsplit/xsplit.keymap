@@ -48,7 +48,7 @@
     };
 
 
-       xsplit_layout: keymap {
+       xsplit_keymap: keymap {
         compatible = "zmk,keymap";
 
         layer0 {
