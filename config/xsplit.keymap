@@ -40,7 +40,7 @@
 
     behaviors {
     };
-/ {
+
         xsplit_layout: keymap {
         compatible = "zmk,keymap";
 
@@ -96,4 +96,4 @@
         };
     };
   };
-};
+
