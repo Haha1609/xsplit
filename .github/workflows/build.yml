@@ -8,4 +8,19 @@ on:
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        
+      - name: Set up environment variables
+        run: |
+          echo "BOARD_ROOT=${{ github.workspace }}/boards/arm/xsplit" >> $GITHUB_ENV
 
+      - name: Build ZMK Firmware (Left)
+        run: |
+          west build -b xsplit_left .
+      
+      - name: Build ZMK Firmware (Right)
+        run: |
+          west build -b xsplit_right .
