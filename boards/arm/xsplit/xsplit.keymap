@@ -47,6 +47,7 @@
         tap-ms = <30>;
     };
 
+/ {
          keymap {
         compatible = "zmk,keymap";
 
@@ -106,4 +107,5 @@
             >;
         };
     };
+};
 };
