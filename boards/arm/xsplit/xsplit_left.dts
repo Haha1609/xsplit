@@ -10,6 +10,7 @@
 / {
     chosen {
         zmk,kscan = &kscan0;
+        zmk,keyboard-layout = &xsplit_layout; // Added reference to the new layout node
     };
 
     kscan0: kscan {
@@ -49,6 +50,12 @@
             RC(4,0) RC(4,1) RC(4,2) RC(4,3) RC(4,4) RC(4,5) RC(4,6)
             RC(5,0) RC(5,1) RC(5,2) RC(5,3) RC(5,4) RC(5,5) RC(5,6)
         >;
+    };
+    // ✅ ADD THIS NODE TO FIX THE ERROR
+    xsplit_layout: xsplit_layout {
+        compatible = "zmk,keyboard-layout";
+        label = "XSplit Layout";
+        transform = <&default_transform>;
     };
 };
 
