@@ -260,6 +260,6 @@ nice_view_spi: &spi0 {
         prechargep = <0x22>;
         com-sequential;
         contrast = <127>;
-        reset-gpios = <&gpio0 10 GPIO_ACTIVE_LOW>; // Adjust this line as needed
+        reset-gpios = <&gpio1 1 GPIO_ACTIVE_LOW>; // Adjust this line as needed
     };
 };
