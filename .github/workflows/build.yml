@@ -8,33 +8,34 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repository
+      - name: Checkout config repo (your repo)
         uses: actions/checkout@v3
-        
-      - name: Set up Python & Install west
+
+      - name: Install west and deps
         run: |
           sudo apt update
           sudo apt install -y python3-pip cmake ninja-build gperf \
-              ccache dfu-util device-tree-compiler wget \
-              python3-dev libffi-dev git
+            ccache dfu-util device-tree-compiler wget \
+            python3-dev libffi-dev git
           pip3 install --user west
           echo "$HOME/.local/bin" >> $GITHUB_PATH
 
-      - name: Initialize west and update
+      - name: Clone ZMK firmware
         run: |
-          west init .
+          git clone https://github.com/zmkfirmware/zmk.git zmk
+          cd zmk
+          west init -l app
           west update
-          west zephyr-export       
-          
-      - name: Set up environment variables
-        run: |
-          echo "BOARD_ROOT=${{ github.workspace }}/boards/arm/xsplit" >> $GITHUB_ENV
+          west zephyr-export
 
-      - name: Build ZMK Firmware (Left)
+      - name: Build Left
         run: |
-          west build -b xsplit_left .
-      
-      - name: Build ZMK Firmware (Right)
+          cd zmk
+          west build -s app -b xsplit_left -- -DZMK_CONFIG="${{ github.workspace }}"
+
+      - name: Build Right
         run: |
-          west build -b xsplit_right .
+          cd zmk
+          west build -s app -b xsplit_right -- -DZMK_CONFIG="${{ github.workspace }}"
