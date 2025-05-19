@@ -47,7 +47,7 @@
         tap-ms = <30>;
     };
 
-    keymap {
+   xsplit_layout: keymap {
         compatible = "zmk,keymap";
 
         layer0 {
