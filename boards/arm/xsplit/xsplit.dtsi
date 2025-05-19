@@ -25,6 +25,7 @@
         zmk,underglow = &led_strip;
         zmk,physical-layout = &xsplit_layout;
         zmk,backlight = &backlight;
+	zephyr,display = &ssd1306;
 	zmk,physical-layout = &xsplit_layout;
     	zmk,keymap = &xsplit_keymap;
 
