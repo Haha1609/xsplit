@@ -25,6 +25,8 @@
         zmk,underglow = &led_strip;
         zmk,physical-layout = &xsplit_layout;
         zmk,backlight = &backlight;
+	zmk,keymap = &xsplit_layout;
+
     };
 
 	left_encoder: encoder_left {
