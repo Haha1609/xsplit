@@ -48,13 +48,8 @@
     };
 
 / {
-         keymap {
+       xsplit_layout: keymap {
         compatible = "zmk,keymap";
-
-        xsplit_layout: xsplit_layout {
-            compatible = "zmk,matrix-transform";
-            rows = <6>;
-            columns = <14>; 
 
         layer0 {
             bindings = <
