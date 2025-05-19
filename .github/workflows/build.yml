@@ -22,6 +22,9 @@ jobs:
           pip3 install --user west
           echo "$HOME/.local/bin" >> $GITHUB_PATH
 
+      - name: Install pyelftools
+        run: pip3 install --user pyelftools
+
       - name: Clone ZMK firmware
         run: |
           git clone https://github.com/zmkfirmware/zmk.git zmk
