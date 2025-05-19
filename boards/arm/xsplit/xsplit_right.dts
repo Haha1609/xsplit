@@ -39,6 +39,7 @@
 
 default_transform: keymap_transform_0 {
     compatible = "zmk,matrix-transform";
+    col-offset = <7>;
     columns = <7>;
     rows = <6>;
     map = <
